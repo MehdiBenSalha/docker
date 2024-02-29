@@ -12,7 +12,9 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-      
+      args:
+        - DOCKER_IMAGE_NAME=mehdibs1920/tp-docker-nestjs
+    image: mehdibs1920/tp-docker-nestjs
     container_name: coffee-1
     ports:
       - "3000:3002"
